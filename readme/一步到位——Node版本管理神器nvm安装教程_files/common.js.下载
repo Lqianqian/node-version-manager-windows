@@ -1,0 +1,45 @@
+
+$(function () {
+    if (GetUrlPara() == "action=onClick") {
+        $("#article_content").removeClass("article_content");
+        $("#vip").remove();
+    }
+             else{
+    				setTimeout(() => {
+    				$(".baidu_pl").removeAttr("style");
+                    $("#article_content").removeAttr("style");
+					if($('#vip a').length>1)
+					{$('#vip a').attr("href",$('#vip a:last').attr("href")+"?action=onClick");}else{$('#vip a').attr("href",$('#vip a').attr("href")+"?action=onClick");}
+					
+					
+    				}, 1000);
+    			  
+    		 }
+$('img').each(function(){
+	if(!($(this).attr('src').indexOf('oss.rstk.cn')>0))
+	{
+		$(this).attr('referrerpolicy','no-referrer');
+	}
+});
+			 
+});
+
+function GetUrlPara() {
+    var url = document.location.toString();
+    var arrUrl = url.split("?");
+    var para = arrUrl[1];
+    return para;
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ec3b81aef7757b3fe5921308c1850875";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+$('.Disclaimers').prepend('本文来自互联网用户投稿，该文观点仅代表作者本人，不代表本站立场。本站仅提供信息存储空间服务，不拥有所有权，不承担相关法律责任。如若转载，请注明出处：');
+$('.email').text('如若内容造成侵权/违法违规/事实不符，请联系我的编程生涯网邮箱：xxxxxxxxx@qq.com进行投诉反馈，一经查实，立即删除！');
+
+

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.rstk.cn/news/73161.html?action=onClick -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>一步到位——Node版本管理神器nvm安装教程（2023最新）</title>
+<meta name="keywords" content="一步到位——Node版本管理神器nvm安装教程（2023最新）">
+<meta name="description" content="Node.js版本管理神器——nvm安装/避坑/使用全教程&amp;#xff08;2023年最新&amp;#xff09; 
+前言&amp;#x1f921; 
+Node的安装是许多学习前端的小伙伴的必经之路&amp;#xff0c;我们可能会遇到需要切换node版本的情况&amp;#xff0c;卸载node再安装另一个显然不够优雅&amp;#xff0c;因此nvm的…">
+<meta property="og:type" content="article">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="stylesheet" href="./一步到位——Node版本管理神器nvm安装教程_files/cssallinone.css" type="text/css">
+<script src="./一步到位——Node版本管理神器nvm安装教程_files/hm.js.下载"></script><script type="text/javascript" src="./一步到位——Node版本管理神器nvm安装教程_files/jquery.min.js.下载"></script>
+<script src="./一步到位——Node版本管理神器nvm安装教程_files/jquery.sticky.min.js.下载"></script>
+</head>
+<body class="single post-73161">
+<div id="page" class="site">
+<header id="masthead" class="site-header clear">
+<div class="container">
+<div class="site-branding">
+<div id="logo">
+<a href="https://www.rstk.cn/" class="custom-logo-link" rel="home" itemprop="url">
+<img width="247" height="60" src="./一步到位——Node版本管理神器nvm安装教程_files/logo.png" class="custom-logo" alt="我的编程经验分享" title="我的编程经验分享" itemprop="logo" referrerpolicy="no-referrer"></a>
+</div>
+</div>
+<nav id="primary-nav" class="primary-navigation">
+<div class="menu-top-container">
+<ul id="primary-menu" class="sf-menu">
+<li><a href="https://www.rstk.cn/news.html" title="编程日记">编程日记</a></li>
+<li><a href="https://www.rstk.cn/chatgpt.html" title="chatgpt专题">chatgpt专题</a></li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+<div id="content" class="site-content container two-col-layout  clear">
+<div id="primary" class="content-area">
+<div class="right-col">
+<main id="main" class="site-main">
+<article class="hentry" id="post-103" style="padding-top: 110px;">
+<div class="gkt-breadcrumbs">当前位置：
+<a href="https://www.rstk.cn/">首页</a>
+<small>&gt;</small>
+<a href="https://www.rstk.cn/news.html">news</a>
+<small>&gt;</small>正文</div>
+<header class="entry-header sticky-breadcrumbs">
+<div id="single-sticky" class="container">
+<h1 class="entry-title">一步到位——Node版本管理神器nvm安装教程（2023最新）</h1>
+<div class="entry-meta">
+<span class="entry-category"><a href="https://www.rstk.cn/news.html">news</a></span>
+<span class="entry-date">2023/9/21 15:26:32</span>
+</div>
+</div>
+</header>
+<article class="baidu_pl"><div id="article_content" class="clearfix"><div id="content_views" class="markdown_views prism-atom-one-light"><svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path></svg><h1><a id="Nodejsnvm2023_0"></a>Node.js版本管理神器——nvm安装/避坑/使用全教程（2023年最新）</h1> 
+<h2><a id="_1"></a>前言🤡</h2> 
+<p>Node的安装是许多学习前端的小伙伴的必经之路，我们可能会遇到需要切换node版本的情况，卸载node再安装另一个显然不够优雅，因此nvm的出现极大提高我们切换node的效率。<br> 然而，在nvm的安装过程中有很多坑，许多新手非常容易踩雷，那么接下来让我带领你们，<strong>一次到位安装nvm，包能用，包提醒哪里有坑😀</strong>，只要你按我说的一步一步做即可，记得点赞收藏一波哈👏👏👏！</p> 
+<p><strong>为保证一次包过，所有cmd操作请用❗管理员身份❗运行</strong></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/79de5eef0e32468788ee3e9edf593d51.png" alt="cmd"><br> <img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/73bcb27d20db44c687a00213a8f75231.png" alt="在这里插入图片描述"></p> 
+<h2><a id="ChatGPT_9"></a>题外话—ChatGPT的回答</h2> 
+<p>ChatGPT最近很火爆，快来看看它怎么回答😎<br> <img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/1b017b67a9bb43cdaf98fd73ee805c5d.png" alt="chatgpt的回答"></p> 
+<p>咳咳🤧，好的我们开始正片！</p> 
+<h2><a id="nvm_16"></a>一、下载nvm</h2> 
+<h3><a id="1__17"></a>1. 发行版本地址👈</h3> 
+<p>https://github.com/coreybutler/nvm-windows/releases<br> 在这里可以查看到所有发行版本</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/72b8fa9a46fc4dbda678fc0493540113.png" alt="nvm-GitHub的发行版本"></p> 
+<h3><a id="2__22"></a>2. 如何选择版本，为什么❓</h3> 
+<p>现在是2023年，已经更新到1.1.10版本了，那么我们该选择哪个版本呢？这里我的建议是初学者使用<strong>稳定版1.1.7</strong>版本，因为在1.1.8和1.1.9版本的安装和使用过程中，相对来说更容易遇到报错的情况，而1.1.7版本更加稳定和久经考验，因此本文选择1.1.7版本</p> 
+<h3><a id="3__24"></a>3. 值得点赞😍的贴心下载链接</h3> 
+<p>我们选择zip版本的压缩包下载即可，在压缩包里面是一个exe文件，在这里我也把链接放上，方便小伙伴一步到位下载👈<br> https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/5674034c678d4749bdcfb96092ec8ab8.png" alt="nvm1.1.7版本下载"></p> 
+<h2><a id="Nodejs_29"></a>二、删除已有的Node.js</h2> 
+<h3><a id="1__30"></a>1. 为什么要卸载呢❓</h3> 
+<p>这是因为如果不卸载的话，有可能安装不成功，如下图2所示，在安装1.1.7的版本过程中，如果不事先卸载已安装的版本的话，则nvm安装程序也会提示<strong>在安装nvm之前必须先卸载已安装的Node.js</strong>，所以呢，如果我们所以呢我们就不要心疼了，直接大大方方卸载就行~</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/0fe9d990b381422b9af2745cc05d62f8.png" alt="安装1.1.7可能遇到的问题"><br> <img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/78fb401374a84e868078b4e6c3370d15.png" alt="安装1.1.7可能遇到的问题"></p> 
+<p>那么在哪里卸载呢？</p> 
+<h3><a id="2_Nodejs_37"></a>2. 在控制面板卸载Node.js🛠️</h3> 
+<p>按下Win键，直接键盘输入控制面板的拼音即可，或者Win + R打开运行输入control回车也行</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/86d7545d5c314864b35659da11717a71.png" alt="打开控制面板"></p> 
+<p>然后点击卸载程序</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/d56c24c282604620a337c8345c554efe.png" alt="控制面板"></p> 
+<p>然后我们找到Node.js</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/4ca851ae06594f4cbdc43f041dc795b5.png" alt="在这里插入图片描述"></p> 
+<p>双击，然后选是，卸载即可</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/506a458a11f4491ab51012ab059b0b54.png" alt="在这里插入图片描述"></p> 
+<p>好的，这一步我们就卸载完了，打开cmd，输入node，这时候也提示</p> 
+<blockquote> <p>‘node’ 不是内部或外部命令，也不是可运行的程序或批处理文件。</p> 
+</blockquote> 
+<p>说明我们已经卸载完毕</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/fa5cee4f68bc4b12b7d79fad9d6f2761.png" alt="在这里插入图片描述"></p> 
+<h2><a id="nvm_62"></a>三、安装nvm</h2> 
+<h3><a id="1__63"></a>1. 同意用户协议👏</h3> 
+<p>双击exe文件，选择<strong>I accept the agreement</strong>，然后<strong>next</strong></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/e1d2f8c7b35d4b6484800a541c99ea12.png" alt="安装nvm1.1.7"></p> 
+<p>接下来是选择安装目录，这一步我们一般默认即可</p> 
+<h3><a id="2_nvm_69"></a>2. 选择nvm安装目录</h3> 
+<p>但是要注意了❗如果要修改的话，安装路径中，文件夹<strong>不能含有中文</strong>，推荐<strong>选择一个没有中文或者空格的安装目录</strong>，这一点特别注意，路径必须全英文，不含有任何中文字符，这一点在初学者中很容易犯错，比如<em>D:\软件\nvm、C:\Users\坤坤\nvm</em> ，都是不推荐的，后续使用过程中一般会报错</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/9c3260bc58e34ad1a97ccf582e9f3b37.png" alt="安装nvm1.1.7"></p> 
+<h4><a id="_73"></a>报错示例</h4> 
+<p>nvm安装目录包含中文的话，执行后续指令的时候，会报这个错</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/f55ab96587c544719db4f07f76b81d8e.png" alt="报错示例"></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/3a5bb88f7c894e099f9c8e61fa0809b1.png" alt="报错示例"></p> 
+<p>如果实在不小心安装在中文目录的话，则卸载重来即可</p> 
+<h3><a id="3_nodejs_83"></a>3. 选择nodejs的安装目录</h3> 
+<p>下一步是选择nodejs的安装目录，这里直接默认即可，如果要改的话，路径最好也是全英文的</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/b45ae694bb29404896bc64c73cdf25a9.png" alt="安装nvm1.1.7"></p> 
+<h4><a id="_88"></a>报错示例</h4> 
+<p>Node.js安装目录包含中文的话，执行后续指令的时候，会报这个错</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/c40ddb55d3c94726b287b785fcd11913.png" alt="报错示例"></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/6c9a4d876b35411e9297f60428d364d2.png" alt="报错示例"></p> 
+<h3><a id="4_Install_95"></a>4. Install</h3> 
+<p>然后直接install即可</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/4ba892127dc249af894bbd0db4914f93.png" alt="安装nvm1.1.7"></p> 
+<h3><a id="5__100"></a>5. 安装完成</h3> 
+<p>点击Finish完成安装</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/4ccb2c7efb704991ab8578e98b8d0f4e.png" alt="安装nvm1.1.7"></p> 
+<h2><a id="nvm_105"></a>四、配置nvm镜像</h2> 
+<h3><a id="1__107"></a>1. 寻找安装目录</h3> 
+<p>我们打开cmd，输入 <code>nvm</code> ，可以看到打印出了nvm的指令列表，说明nvm安装成功</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/b3b7e701d06641a883075fc51c6c760a.png" alt="nvm命令"><br> 我们输入 <code>nvm root</code> 查看nvm的安装目录</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/42b4cb66436f417693a87566cf1efc84.png" alt="在这里插入图片描述"></p> 
+<p>默认情况在这个位置，如果你是旧版cmd的话，直接选择这段路径，回车即可复制，或者Ctrl + Insert(Ins)</p> 
+<p><code>C:\Users\你的用户名\AppData\Roaming\nvm</code></p> 
+<p>然后我们按下Win键直接Ctrl + V粘贴即可</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/614d64cd940c48699c8508e485e6bcce.png" alt="在这里插入图片描述"></p> 
+<h3><a id="2__122"></a>2. 修改配置</h3> 
+<p>打开安装目录后，直接编辑settings.txt即可</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/518600857cd94cd9b2f3b7a03f418233.png" alt="nvm安装目录"></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/afc5dbf856b94143a36d8a6d2b6e84fa.png" alt="settings.txt"></p> 
+<p>加入以下配置，Ctrl + S保存即可</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/f89fd876d85d46f480634e01eb767939.png" alt="在这里插入图片描述"></p> 
+<pre><code class="prism language-txt">node_mirror: https://npm.taobao.org/mirrors/node/
+npm_mirror: https://npm.taobao.org/mirrors/npm/
+</code></pre> 
+<h2><a id="nvm_138"></a>五、使用nvm</h2> 
+<p><strong>注意❗，我们先关闭cmd，然后重新打开一个</strong></p> 
+<h3><a id="1__143"></a>1. 查看可用版本</h3> 
+<p>输入以下格式的指令</p> 
+<pre><code class="prism language-bash">nvm list available
+</code></pre> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/d8c6f70daee547c1a62ffd3efd74ffdc.png" alt="nvm list available"></p> 
+<p>可以查看到最近的版本和LTS长期支持版，如果要查看全部版本则可以到以下网址查看所有发行版本</p> 
+<p>https://nodejs.org/download/release</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/374c9f203b304dc087e3cc5e61296b6c.png" alt="在这里插入图片描述"></p> 
+<h3><a id="2_Nodejs_156"></a>2. 安装Node.js</h3> 
+<p>输入以下格式的指令</p> 
+<pre><code class="prism language-bash">nvm <span class="token function">install</span> 版本号
+</code></pre> 
+<p>例如 <code>nvm install 16.12.0</code></p> 
+<p>一般来说，在配置了淘宝镜像之后，下载速度很快，如果下载很慢的话，有可能是没有配置镜像或者网络波动</p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/b4fb8a4125fa448ca7b6ec6dd5a12f77.png" alt="在这里插入图片描述"></p> 
+<h3><a id="3__166"></a>3. 使用对应的版本</h3> 
+<pre><code class="prism language-bash">nvm use 版本号
+</code></pre> 
+<p>例如 <code>nvm use 16.12.0</code></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/af811be379cc4a4a95765a2fe17e4762.png" alt="在这里插入图片描述"><br> 现在就切换到了Node.js 16.12.0版本</p> 
+<h3><a id="4_npm_177"></a>4. 查看npm版本</h3> 
+<pre><code class="prism language-bash"><span class="token function">npm</span> -v
+</code></pre> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/e5a299a6638a451badf21c306461d842.png" alt="在这里插入图片描述"></p> 
+<h3><a id="5_npm_182"></a>5. npm升级降级安装</h3> 
+<pre><code class="prism language-bash"><span class="token function">npm</span> <span class="token function">install</span> npm@版本号
+</code></pre> 
+<p>例如 <code>npm i npm@6</code></p> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/d65443ec60254bb0bd51be7090c8c080.png" alt="在这里插入图片描述"></p> 
+<h3><a id="6__190"></a>6. 多版本管理</h3> 
+<h4><a id="Nodejs_191"></a>查看下载的Node.js版本列表</h4> 
+<pre><code class="prism language-bath">nvm ls
+</code></pre> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/24a091799c7342deba2c114fa669fbf2.png" alt="在这里插入图片描述"></p> 
+<p>Currently using 64-bit executable 表示当前使用的版本</p> 
+<h4><a id="_201"></a>卸载某个版本</h4> 
+<pre><code class="prism language-bash">nvm uninstall 版本号
+</code></pre> 
+<p><img referrerpolicy="no-referrer" src="./一步到位——Node版本管理神器nvm安装教程_files/726517df5eaf4127938fa6b647ccc0c6.png" alt="在这里插入图片描述"></p> 
+<h3><a id="7__208"></a>7. 附录：所有指令</h3> 
+<pre><code class="prism language-bash">nvm-arch <span class="token comment">#显示节点是以32位还是64位模式运行。</span>nvm install＜version＞<span class="token punctuation">[</span>arch<span class="token punctuation">]</span> 
+<span class="token comment">#版本可以是node.js版本，也可以是“最新”的最新稳定版本。</span>
+<span class="token comment">#（可选）指定是安装32位版本还是64位版本（默认为system arch）。</span>
+<span class="token comment">#将[arch]设置为“all”以安装32 AND 64位版本。</span>
+<span class="token comment">#在该命令的末尾添加--unsecurity，以绕过远程下载服务器的SSL验证。</span>nvm list<span class="token punctuation">[</span>可用<span class="token punctuation">]</span> <span class="token comment"># 列出node.js的安装。在末尾键入“available”（可用），查看可以安装的内容。别名为ls。</span>nvm on <span class="token comment">#启用node.js版本管理。</span>nvm off <span class="token comment">#禁用node.js版本管理。</span>nvm proxy <span class="token punctuation">[</span>url<span class="token punctuation">]</span> 
+<span class="token comment">#设置用于下载的代理。将[url]留空以查看当前代理。</span>
+<span class="token comment">#将[url]设置为“none”以删除代理。</span>nvm node_mirror <span class="token punctuation">[</span>url<span class="token punctuation">]</span> <span class="token comment">#设置节点镜像。默认为https://nodejs.org/dist/.将[url]留空以使用默认url。</span>nvm npm_mirror <span class="token punctuation">[</span>url<span class="token punctuation">]</span> <span class="token comment">#设置npm镜像。默认为https://github.com/npm/cli/archive/.将[url]留空为默认url。</span>nvm uninstall ＜version＞ <span class="token comment">#版本必须是特定的版本。</span>nvm use <span class="token punctuation">[</span>version<span class="token punctuation">]</span> <span class="token punctuation">[</span>arch<span class="token punctuation">]</span> 
+<span class="token comment">#切换到使用指定的版本。可选择指定32/64位体系结构。</span>
+<span class="token comment">#nvm使用＜arch＞将继续使用所选版本，但切换到32/64位模式。</span>
+<span class="token comment">#nvm-root[path]：设置nvm应存储不同版本node.js的目录。</span>
+<span class="token comment">#如果未设置＜path＞，则会显示当前根目录。</span>nvm version <span class="token comment">#显示用于Windows的nvm的当前运行版本。别名为v。</span>
+</code></pre></div></div><div id="treeSkill"></div>
+
+<div class="entry-copyright">
+<span class="source_url">文章来源:https://blog.csdn.net/m0_46491549/article/details/129750694</span><br>
+<span class="Disclaimers">本文来自互联网用户投稿，该文观点仅代表作者本人，不代表本站立场。本站仅提供信息存储空间服务，不拥有所有权，不承担相关法律责任。如若转载，请注明出处：<a href="https://www.rstk.cn/news/73161.html">https://www.rstk.cn/news/73161.html</a></span>
+<span class="email">如若内容造成侵权/违法违规/事实不符，请联系我的编程生涯网邮箱：xxxxxxxxx@qq.com进行投诉反馈，一经查实，立即删除！</span>
+</div>
+<div class="entry-footer clear">
+<div class="entry-tags" style="margin-top:8px;">
+<span class="gkt-tags">
+</span>
+</div>
+</div>
+<div class="gkt-entry-xgwz clear" style="margin-bottom:8px;">
+<h3>相关文章：</h3>
+<li>
+<a href="https://www.rstk.cn/news/73160.html">java使用stream对日期排序</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73159.html">11 The Memory Hierarchy(存储器层次结构)</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73158.html">软件外包开发的上线与维护</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73157.html">利用jquery.i18n.properties实现前端网页国际化小示例（详细版）</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73156.html">Qlib使用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73155.html">一篇文章搞定js正则表达式</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73154.html">人工智能入门路径</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73153.html">【C++进阶】C++11(上)列表初始化、变量类型推导和新增加容器(静态数组array、forward_list以及unordered系列)</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73151.html">半入耳式蓝牙耳机哪个好用？高端半入耳式蓝牙耳机推荐</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73150.html">Docker 自定义镜像</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73149.html">我对设计模式原则的理解</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73147.html">Python每日一个知识点10----快速定位截图</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73146.html">KingbaseES的学习心得和知识总结（一）|Kingbase数据库动态性能视图</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73145.html">IDEA Menu</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73144.html">几种有趣的电路设计（防过压，LLC,PFC，正激和反激电路）</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73143.html">java定位问题、发布紧急版本验证方案</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73142.html">动态网站开发讲课笔记05：会话及会话技术</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73141.html">Python 的十大特性，你都了解吗</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73140.html">【Azure 架构师学习笔记】-Azure Storage Account（4）- ADF 读取Queue Storage</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73139.html">好玩的chatgpt网站</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73138.html">深度学习训练营Y3之yolov5s.yaml解析</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73137.html">我用Python django开发了一个商城系统，已开源，求关注！</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73134.html">Python函数简介</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73133.html">【Unity3D】法线贴图和凹凸映射</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73132.html">SpringBoot实战（十三）集成 Admin</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73131.html">重磅消息！ChatGPT 联网，Milvus  Zilliz 正式嵌入用于向量检索！</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73130.html">Vue3为什么要使用组合式API——Vue3的组合式API和Vue2的选项式API的优缺点</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73129.html">中流-介绍</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73128.html">【0基础学爬虫】爬虫基础之代理的基本使用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73127.html">狗都能看懂的VAE笔记</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73125.html">sql性能优化：MS-SQL（SQL Server）常见服务器配置选项（sp_configure ）对照表</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73124.html">【ConfluxNews】关爱流浪猫~今晚里鹏的猫 与淘派举办首场AMA</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73123.html">数据结构与算法：堆和栈的区别概述</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73121.html">【Android】之【Aplication】</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73120.html">Python-GEE遥感云大数据分析、管理与可视化</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73118.html">桌面文件删除了怎么恢复</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73117.html">微服务工程以及领域驱动设计(DDD)的六个维度思考理解</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73115.html">free命令详解</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73114.html">Pyspark_SQL5</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73113.html">线程与子线程</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73112.html">ChatGPT常用开源项目汇总</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73111.html">C/C++宏中#的用法以及多重宏的展开过程</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73109.html">针对iframe的id或name值每次都会变动，selenium定位解决方案</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73108.html">Pytorch入门实战 | 第P7周：咖啡豆识别</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73107.html">Java 开启异步线程的几种方法，你都了解吗？</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73106.html">《扬帆优配》ChatGPT概念股遭集体抛售！</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73105.html">【git】git怎么提交代码，提交代码的2种方法</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73104.html">双非保研边缘人保研经验</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73103.html">单例工场相关内容</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73102.html">C++之右值引用和移动构造函数</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73101.html">就一篇特定的重定向工作中的统计分析方法的简介和应用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73100.html">String框架——IOC、DI</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73099.html">手指的状态</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73098.html">SpringSecurity5-教程5-前后端分离系统OAuth2授权登录重定向原页面</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73097.html">监听div滚动高度</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73096.html">Github隐藏功能显示自己的README，个人化你的Github主页</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73095.html">国产化的接口测试、接口自动化测试工具apifox的介绍及使用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73094.html">一文浅析Nginx线程池！</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73092.html">mysql中union和union all的使用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73091.html">SSD目标检测算法原理（上）</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73090.html">笔记本电脑连接不上WiFi怎么办？4个实用解决方法！</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73089.html">【JavaSE】Java中的String类</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73088.html">阿里架构师熬了一个月肝出这份40W 字 Java 面试手册，全是面试官必问技术</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73087.html">部署私有npm 库</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73086.html">mysql binlog 的配置与使用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73085.html">冯诺依曼体系</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73084.html">【数据结构】时间及空间复杂度</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73083.html">微信小程序自定义组件</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73082.html">kubernetes(k8s)为容器和 Pod 分配内存资源</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73081.html">构造HTTP请求HTTPS加密</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73080.html">linux命令-chmod</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73078.html">使用VS2019连接Microsoft SQL Server Compact 4.0数据库</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73077.html">Flink学习笔记（三）State管理与恢复</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73076.html">python基本介绍</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73075.html">aHooks简单总结</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73074.html">用 4EVERLAND 创造一个永不消失的星球</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73073.html">RNN中词向量的实现：Skip-gram的实现</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73071.html">3分钟阐述这些年我的 接口自动化测试 职业生涯经验分享</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73069.html">【04】项目结构</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73068.html">JUC并发编程共享模型之不可变（六）</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73067.html">【Spring Cloud Alibaba】3.创建服务提供者</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73066.html">CSS3之转换属性</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73065.html">人工智能的特点及人工智能应用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73063.html">【蓝桥杯】X进制减法、贪心思想、小白专用</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73062.html">java IO流、同步异步、阻塞非阻塞、IO模型、Path、File简单汇总</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73061.html">【总结】面向对象</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73060.html">Prometheus之PromQL语法详解及使用方法</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73059.html">mysql数据库日志、备份与恢复</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73058.html">UWB芯片DW3000介绍四数据双缓存接收</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73057.html">2023年动态网站开发讲课笔记</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73056.html">音视频高阶—H264自适应的变长编码【CAVLC】</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73055.html">Android进阶之路 - 通过Gradle 窗口、插件、命令 查看项目依赖</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73054.html">简述四种线上环境建设思路</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73052.html">@Autowired和@Resource区别</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73051.html">华为OD机试题【不等式 or 约束条件下的最大差】用 Java 解 | 含解题说明</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73050.html">mobaxterm连接到Linux虚拟机</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73049.html">sqoop：mysql2hive传输数据出现问题</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73048.html">NET WinForm 开发如何多国语言本地化显示</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73047.html">DI相关内容</a>
+</li>
+<li>
+<a href="https://www.rstk.cn/news/73046.html">计算机专业来说是学习Python还是Java呢？</a>
+</li>
+</div>
+</article>
+</article></main>
+</div>
+</div>
+<aside id="secondary" class="widget-area sidebar">
+<div class="widget  widget_posts_thumbnail" style="margin-top:6px;">
+<h2 class="widget-title">最新文章</h2>
+<ul>
+<li class="clear">
+<a href="https://www.rstk.cn/news/2177548.html" rel="bookmark">
+<div class="thumbnail-wrap">
+<img referrerpolicy="no-referrer" width="120" height="80" src="./一步到位——Node版本管理神器nvm安装教程_files/no-images.jpg" alt=" [C++随笔录] vector使用">
+</div>
+</a>
+<div class="entry-wrap">
+<a href="https://www.rstk.cn/news/2177548.html" rel="bookmark"> [C++随笔录] vector使用</a>
+<div class="entry-meta">2023/9/21 16:13:17</div></div>
+</li>
+<li class="clear">
+<a href="https://www.rstk.cn/news/2177547.html" rel="bookmark">
+<div class="thumbnail-wrap">
+<img referrerpolicy="no-referrer" width="120" height="80" src="./一步到位——Node版本管理神器nvm安装教程_files/941900fcb52c4759bb3ac800f63c0156.png" alt=" el-dialog窗口添加滚动条">
+</div>
+</a>
+<div class="entry-wrap">
+<a href="https://www.rstk.cn/news/2177547.html" rel="bookmark"> el-dialog窗口添加滚动条</a>
+<div class="entry-meta">2023/9/21 16:12:15</div></div>
+</li>
+<li class="clear">
+<a href="https://www.rstk.cn/news/2177546.html" rel="bookmark">
+<div class="thumbnail-wrap">
+<img referrerpolicy="no-referrer" width="120" height="80" src="./一步到位——Node版本管理神器nvm安装教程_files/ff41836da29247d287c8aa1efd63a829.png" alt=" VGG网络">
+</div>
+</a>
+<div class="entry-wrap">
+<a href="https://www.rstk.cn/news/2177546.html" rel="bookmark"> VGG网络</a>
+<div class="entry-meta">2023/9/21 16:10:03</div></div>
+</li>
+<li class="clear">
+<a href="https://www.rstk.cn/news/2177545.html" rel="bookmark">
+<div class="thumbnail-wrap">
+<img referrerpolicy="no-referrer" width="120" height="80" src="./一步到位——Node版本管理神器nvm安装教程_files/no-images.jpg" alt=" css知识学习系列（1）-每天10个知识点">
+</div>
+</a>
+<div class="entry-wrap">
+<a href="https://www.rstk.cn/news/2177545.html" rel="bookmark"> css知识学习系列（1）-每天10个知识点</a>
+<div class="entry-meta">2023/9/21 16:08:58</div></div>
+</li>
+<li class="clear">
+<a href="https://www.rstk.cn/news/2177544.html" rel="bookmark">
+<div class="thumbnail-wrap">
+<img referrerpolicy="no-referrer" width="120" height="80" src="./一步到位——Node版本管理神器nvm安装教程_files/958db932748341668af173397ccccf40.png" alt=" 数据结构——图(图的存储及基本操作)">
+</div>
+</a>
+<div class="entry-wrap">
+<a href="https://www.rstk.cn/news/2177544.html" rel="bookmark"> 数据结构——图(图的存储及基本操作)</a>
+<div class="entry-meta">2023/9/21 16:07:53</div></div>
+</li>
+<li class="clear">
+<a href="https://www.rstk.cn/news/2177543.html" rel="bookmark">
+<div class="thumbnail-wrap">
+<img referrerpolicy="no-referrer" width="120" height="80" src="./一步到位——Node版本管理神器nvm安装教程_files/4a3d2dc909d846f3ade748eb38789629.png" alt=" 《golang设计模式》第二部分·结构型模式-05-门面模式Facade）">
+</div>
+</a>
+<div class="entry-wrap">
+<a href="https://www.rstk.cn/news/2177543.html" rel="bookmark"> 《golang设计模式》第二部分·结构型模式-05-门面模式Facade）</a>
+<div class="entry-meta">2023/9/21 16:06:51</div></div>
+</li>
+</ul>
+</div>
+</aside>
+</div>
+<footer id="colophon" class="site-footer">
+<div class="clear"></div>
+<div id="site-bottom" class="clear">
+<div class="container">
+<div class="menu-m_footer-container">
+<ul id="footer-menu" class="footer-nav">
+<li>
+<strong>
+<a href="https://www.rstk.cn/">我的编程生涯介绍</a></strong>
+</li>
+<li>
+<strong>
+<a href="https://www.rstk.cn/">商务合作</a></strong>
+</li>
+<li>
+<strong>
+<a href="https://www.rstk.cn/">免责声明</a></strong>
+</li>
+</ul>
+</div>
+<div class="site-info">
+<p>CopyRight ©
+<a href="https://www.rstk.cn/">我的编程生涯</a>版权所有 </p> 
+</div></div></div></footer> </div>
+<div id="back-top">
+<a href="https://www.rstk.cn/news/73161.html?action=onClick#top" title="返回顶部">
+<svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+<path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="#3d4de6" stroke="#3d4de6" stroke-width="4" stroke-linejoin="round"></path>
+<path d="M24 33.5V15.5" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M33 24.5L24 15.5L15 24.5" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+</div>
+<script>(function($) { 
+$(document).ready(function() {
+"use strict";
+$(window).scroll(function() {
+var aTop = 200;
+if (($(this).scrollTop() >= aTop)) {
+$('.single .site-main .entry-header').addClass('sticky-breadcrumbs');
+$('.single #primary article.hentry').css('padding-top', '110px');
+$('#single-sticky').addClass(' container');
+$('.single .left-col').addClass('header-scrolled');
+} else {
+$('.single .site-main .entry-header').removeClass('sticky-breadcrumbs');
+$('.single #primary article.hentry').css('padding-top', '0');
+$('#single-sticky').removeClass(' container');
+$('.single .left-col').removeClass('header-scrolled');
+}
+var leftdiv2=260;
+if (($(this).scrollTop() >= leftdiv2)) {
+$('.leftdiv2').addClass('leftdiv');
+}else{
+$('.leftdiv2').removeClass('leftdiv');
+}
+});
+$(".left-col").sticky({
+topSpacing: 0
+});
+});
+})(jQuery);</script>
+<script src="./一步到位——Node版本管理神器nvm安装教程_files/common.js.下载"></script>
+<script type="text/javascript">$(function() {
+$(".menu-index_left-container li").click(function() {
+$(this).addClass('current-menu-item').siblings().removeClass('current-menu-item');
+});
+var urlstr = location.href;
+var urlstatus = false;
+$(".menu-index_left-container li").each(function() {
+if ((urlstr + "/").indexOf($(this).find('a').attr("href")) > -1 && $(this).find('a').attr("href") != '') {
+$(".menu-index_left-container li").removeClass("current-menu-item");
+$(this).addClass("current-menu-item");
+urlstatus = true;
+} else {
+$(this).removeClass("current-menu-item");
+}
+});
+if (!urlstatus) {
+$(".menu-index_left-container li").eq(0).addClass("current-menu-item");
+}
+})</script>
+<script>
+$(function(){
+$('.source_url').text('文章来源:https://blog.csdn.net/m0_46491549/article/details/129750694');
+});
+/*$('.source_url').on("click",function() {
+window.open('https://blog.csdn.net/m0_46491549/article/details/129750694', '_blank');
+});*/
+</script></body></html>
